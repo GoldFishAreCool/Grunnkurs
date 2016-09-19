@@ -127,13 +127,13 @@ public class Fraction
 	
 	public void input()
 	{
-		System.out.println("\nBestem verdien for teller til brøk 1: ");
+		System.out.println("\nBestem verdien for teller til brøk: ");
 		Scanner i = new Scanner(System.in); 
 		teller = i.nextInt();
 		
 		do
 		{
-			System.out.println("\nBestem verdien for nevner til brøk 1: ");
+			System.out.println("\nBestem verdien for nevner til brøk: ");
 			Scanner o = new Scanner(System.in); 
 			nevner = o.nextInt();
 			
