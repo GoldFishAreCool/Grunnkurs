@@ -70,7 +70,7 @@ public class Tabell
 				{
 					String starshine = " "; 
 					double number = antall[m]; 
-					double numberStarshine = Math.round(number / 10); 
+					double numberStarshine = number; 
 					for (int n = 0; n < numberStarshine; n++)
 					{
 						starshine += "*";
