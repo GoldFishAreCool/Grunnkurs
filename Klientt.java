@@ -65,7 +65,7 @@ class Oppgaveoversikt
 				return i;
 			}
 		}
-		return 0;
+		return -1;
 	}
 	
 	public int getAntOppgLost(String navn)
@@ -109,7 +109,7 @@ class Oppgaveoversikt
 	public boolean okAntOppg(String navn, int okning)
 	{
 		int index = getStudInd(navn);
-		if (index == 0)
+		if (index == -1)
 		{
 			return false;
 		}
