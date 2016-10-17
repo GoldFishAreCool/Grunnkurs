@@ -173,24 +173,22 @@ class Klientt
 
 		boolean noExit = true;
 		Input input = new Input();
-		int teller = 0;
 		Oppgaveoversikt oppg = new Oppgaveoversikt();
 		
 		
 		while (noExit)
 		{
-			//System.out.println(student.toString());
-			System.out.println(oppg.toString());
+			//System.out.println(oppg.toString());
 			
 			switch(input.getInt("\n1- Legg inn student.\n2- Antall oppgaver lost.\n3- Vis antall studenter.\n4- Legg til oppgaver.\n0- avslutt"))
 			{
 			case 0: noExit = false; break; 
 			case 1: oppg.nyStudent(input.getString("Navn: "), input.getInt("Antall oppgaver: ")); break;
-			case 2: oppg.getAntOppgLost(input.getString("Navn på student: ")); break;
-			case 3: System.out.println("\nAntall studenter: " + oppg.getAntStud());; break; 
+			case 2: System.out.println("Oppgaver lost: " + oppg.getAntOppgLost(input.getString("Navn: "))); break;
+			case 3: System.out.println("\nAntall studenter: " + oppg.getAntStud()); break; 
 			case 4: String in = input.getString("Navnet på studentet: ");
 					oppg.okAntOppg(in, input.getInt("\nHvor mange ekstra oppgaver skal godtjenes: ")); 
-					System.out.println("Antall oppgaver lost: " + oppg.getAntOppgLost(in));break;
+					System.out.println("Antall oppgaver lost: " + oppg.getAntOppgLost(in)); break;
 			
 			default: 
 				System.out.println("\nJa... velg riktig verdi, plz.");
